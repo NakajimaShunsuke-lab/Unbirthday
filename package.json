@@ -1,0 +1,25 @@
+{
+  "name": "unbirthday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NakajimaShunsuke-lab/Unbirthday.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NakajimaShunsuke-lab/Unbirthday/issues"
+  },
+  "homepage": "https://github.com/NakajimaShunsuke-lab/Unbirthday#readme",
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
