@@ -1,0 +1,42 @@
+.app-route {
+  min-height: 100vh;
+  padding: var(--space-xxl) 24px;
+}
+
+.app-route--plain {
+  display: grid;
+  place-items: center;
+  background: var(--color-background);
+}
+
+.app-route__content {
+  width: min(100%, var(--container-reading));
+}
+
+.app-route__title {
+  margin: var(--space-xs) 0 0;
+  color: var(--color-text);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.app-route__description {
+  max-width: 42em;
+  margin: var(--space-m) 0 var(--space-l);
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 760px) {
+  .app-route {
+    padding: var(--space-xl) 20px;
+  }
+
+  .app-route__title {
+    font-size: 40px;
+  }
+}

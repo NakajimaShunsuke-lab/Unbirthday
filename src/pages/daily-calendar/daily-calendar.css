@@ -1,0 +1,275 @@
+.daily-calendar-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: var(--space-xxl) 24px;
+  background:
+    linear-gradient(var(--color-border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border-subtle) 1px, transparent 1px),
+    var(--color-surface);
+  background-size: 40px 40px;
+}
+
+.daily-calendar-sheet {
+  position: relative;
+  width: min(100%, var(--container-reading));
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-s);
+  padding: 30px clamp(18px, 5vw, 48px) 36px;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+.daily-calendar-sheet__binding {
+  position: absolute;
+  inset: 0 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 18px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-background);
+}
+
+.daily-calendar-sheet__binding span {
+  border-right: 1px solid var(--color-border-subtle);
+}
+
+.daily-calendar-sheet__binding span:last-child {
+  border-right: 0;
+}
+
+.daily-calendar-sheet__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: var(--space-m);
+  align-items: end;
+  margin-top: var(--space-l);
+  padding-bottom: var(--space-m);
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.daily-calendar-sheet__header h1 {
+  margin: 0;
+  font-size: clamp(42px, 11vw, 76px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.daily-calendar-sheet__era {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.daily-calendar-date {
+  display: grid;
+  grid-template-columns: minmax(70px, 0.7fr) minmax(0, 2.4fr) minmax(76px, 0.8fr);
+  gap: clamp(14px, 4vw, 32px);
+  align-items: center;
+  min-height: 360px;
+  padding: clamp(18px, 5vw, 40px) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.daily-calendar-date__weekday,
+.daily-calendar-date__month {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  justify-items: center;
+}
+
+.daily-calendar-date__weekday-kanji {
+  margin: 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: clamp(34px, 8vw, 58px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0.06em;
+}
+
+.daily-calendar-date__weekday-short {
+  margin: var(--space-s) 0 0;
+  border: 1px solid var(--color-border-strong);
+  padding: 1px 7px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+.daily-calendar-date__number {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  font-size: clamp(160px, 36vw, 300px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 0.82;
+  letter-spacing: 0;
+}
+
+.daily-calendar-date__month-number {
+  margin: 0;
+  font-size: clamp(58px, 12vw, 96px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.daily-calendar-date__month-label {
+  margin: var(--space-xs) 0 0;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: clamp(34px, 8vw, 56px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.daily-calendar-date__month-note,
+.daily-calendar-date__season-note {
+  margin: var(--space-s) 0 0;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-s);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.daily-calendar-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 136px;
+  gap: var(--space-m);
+  align-items: stretch;
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.daily-calendar-details__block {
+  min-width: 0;
+  border-left: 1px solid var(--color-border-strong);
+  padding-left: var(--space-m);
+}
+
+.daily-calendar-details__label {
+  margin: 0 0 var(--space-xs);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+.daily-calendar-details__text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+.daily-mini-calendar {
+  width: 136px;
+  border: 1px solid var(--color-border-strong);
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.2;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.daily-mini-calendar caption {
+  border: 1px solid var(--color-border-strong);
+  border-bottom: 0;
+  padding: 3px 0;
+  font-weight: 600;
+}
+
+.daily-mini-calendar th,
+.daily-mini-calendar td {
+  width: 14.285%;
+  height: 18px;
+  padding: 0;
+  font-weight: 400;
+}
+
+.daily-mini-calendar .is-selected {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-primary-inverse);
+  background: var(--color-primary);
+}
+
+.daily-calendar-memo {
+  min-height: 174px;
+  margin-top: var(--space-l);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-s);
+  padding: var(--space-m);
+}
+
+.daily-calendar-memo h2 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+}
+
+.daily-calendar-memo__lines {
+  display: grid;
+  gap: 30px;
+  margin-top: var(--space-l);
+}
+
+.daily-calendar-memo__lines span {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+@media (max-width: 760px) {
+  .daily-calendar-page {
+    padding: var(--space-xl) 16px;
+  }
+
+  .daily-calendar-sheet {
+    padding: 26px 16px 22px;
+  }
+
+  .daily-calendar-sheet__header {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+
+  .daily-calendar-sheet__header .ui-eyebrow,
+  .daily-calendar-sheet__era {
+    text-align: center;
+  }
+
+  .daily-calendar-date {
+    grid-template-columns: 58px minmax(0, 1fr) 62px;
+    gap: var(--space-s);
+    min-height: 280px;
+  }
+
+  .daily-calendar-details {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-mini-calendar {
+    justify-self: center;
+  }
+}
