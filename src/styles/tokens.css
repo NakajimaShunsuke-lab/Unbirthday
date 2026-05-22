@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #111111;
+  --color-primary-hover: #000000;
+  --color-primary-inverse: #ffffff;
+  --color-danger: #8a1f1f;
+  --color-warning: #7a5a00;
+  --color-success: #2f5d3a;
+  --color-text: #111111;
+  --color-text-secondary: #555555;
+  --color-text-muted: #777777;
+  --color-text-disabled: #a8a8a8;
+  --color-border-strong: #111111;
+  --color-border: #d8d8d8;
+  --color-border-subtle: #eeeeee;
+  --color-background: #ffffff;
+  --color-surface: #fafafa;
+  --font-serif: "Noto Serif JP", "Yu Mincho", "YuMincho",
+    "Hiragino Mincho ProN", Georgia, serif;
+  --font-sans: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+    Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, Menlo, monospace;
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 40px;
+  --space-xxl: 64px;
+  --space-xxxl: 96px;
+  --radius-s: 2px;
+  --container-page: 1120px;
+  --container-reading: 680px;
+}
